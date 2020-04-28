@@ -17,5 +17,10 @@ for i in range(length):
     base = (base - letters[i]) * 26
 result = ""
 for i in range(length):
+    if letters[i] > 26:
+        dif = letters[i] - 26
+        letters[i] -= dif
+        letters[i + 1] += 26
     result += chr(letters[i] + 96)
+print(letters)
 print(result)
